@@ -1,4 +1,10 @@
-import { BookOpen, ChevronDown, LogOut, User } from "lucide-react";
+import {
+  BookOpen,
+  ChevronDown,
+  GraduationCap,
+  LogOut,
+  User,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,10 +18,10 @@ const Navbar = () => {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/">About</Link>
+        <Link href="/courses">Courses</Link>
       </li>
       <li>
-        <Link href="/">Contact</Link>
+        <Link href="/profile">My Profile</Link>
       </li>
     </>
   );
@@ -24,7 +30,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl ">
+            <Link href="/" className="text-2xl font-bold flex gap-2">
+              <GraduationCap size={30} />
               <span className="text-[#6366F1]">Skill</span>Sphere
             </Link>
           </div>

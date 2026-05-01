@@ -1,15 +1,7 @@
-import {
-  BookOpen,
-  ChevronDown,
-  GraduationCap,
-  LogOut,
-  User,
-} from "lucide-react";
-import Image from "next/image";
+import { GraduationCap } from "lucide-react";
+
 import Link from "next/link";
 import React from "react";
-
-import loginImage from "../Asstes/web Design and Developer.png";
 
 const Navbar = () => {
   const links = (

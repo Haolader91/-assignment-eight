@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.postimg.cc/Z5m5K9Jm/web-dev.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "React JS Mastery",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master React with hooks, context API, and projects.",
+    "image": "https://i.postimg.cc/QdXG0hXp/react.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Michael Lee",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn the basics of UI/UX design and prototyping.",
+    "image": "https://i.postimg.cc/3x3QzSGq/uiux.png",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Strategy",
+    "instructor": "Emily Davis",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, and branding.",
+    "image": "https://i.postimg.cc/FsJ7K7bP/marketing.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "Node.js Backend Development",
+    "instructor": "David Wilson",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable backend APIs using Node.js and Express.",
+    "image": "https://i.postimg.cc/Y0nY0Z5p/node.png",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Python for Beginners",
+    "instructor": "Sarah Johnson",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Start coding in Python with practical examples.",
+    "image": "https://i.postimg.cc/8PZ6k6gB/python.png",
+    "category": "Programming"
+  },
+  {
+    "id": 7,
+    "title": "Advanced JavaScript Concepts",
+    "instructor": "Chris Brown",
+    "duration": "16 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Deep dive into closures, prototypes, and async JS.",
+    "image": "https://i.postimg.cc/4xY2wKzF/javascript.png",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Graphic Design Masterclass",
+    "instructor": "Anna White",
+    "duration": "11 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator, and design principles.",
+    "image": "https://i.postimg.cc/vT6wFhYF/design.png",
+    "category": "Design"
+  }
+]

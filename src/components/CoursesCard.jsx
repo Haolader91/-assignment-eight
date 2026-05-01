@@ -58,7 +58,7 @@ const CoursesCard = ({ data }) => {
 
         <div className="card-actions mt-5">
           <Link href={`/coursesPage/${data.id}`}>
-            <button className="btn btn-primary w-full bg-indigo-600 p-1 border-none hover:bg-indigo-700 text-white rounded-xl capitalize">
+            <button className="btn btn-primary w-full bg-indigo-600 p-2 border-none hover:bg-indigo-700 text-white rounded-xl capitalize">
               View Details
             </button>
           </Link>

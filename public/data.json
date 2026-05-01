@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/Z5m5K9Jm/web-dev.png",
+    "image": "https://images.unsplash.com/photo-1581276879432-15e50529f34b",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Master React with hooks, context API, and projects.",
-    "image": "https://i.postimg.cc/QdXG0hXp/react.png",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn the basics of UI/UX design and prototyping.",
-    "image": "https://i.postimg.cc/3x3QzSGq/uiux.png",
+    "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a",
     "category": "Design"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn SEO, social media marketing, and branding.",
-    "image": "https://i.postimg.cc/FsJ7K7bP/marketing.png",
+    "image": "https://images.unsplash.com/photo-1532619675605-1e5e4f6b4f59",
     "category": "Marketing"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Build scalable backend APIs using Node.js and Express.",
-    "image": "https://i.postimg.cc/Y0nY0Z5p/node.png",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
     "category": "Development"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Start coding in Python with practical examples.",
-    "image": "https://i.postimg.cc/8PZ6k6gB/python.png",
+    "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
     "category": "Programming"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Deep dive into closures, prototypes, and async JS.",
-    "image": "https://i.postimg.cc/4xY2wKzF/javascript.png",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn Photoshop, Illustrator, and design principles.",
-    "image": "https://i.postimg.cc/vT6wFhYF/design.png",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
     "category": "Design"
   }
 ]

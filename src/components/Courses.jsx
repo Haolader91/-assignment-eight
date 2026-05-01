@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const Courses = async () => {
-  const res = await fetch("https://assignment-eight-484z.vercel.app/data.json");
+  const res = await fetch("https://assignment-eight-2t62.vercel.app/data.json");
   const data = await res.json();
 
   const topData = data.slice(0, 6);
@@ -37,12 +37,12 @@ const Courses = async () => {
                 NEXT.JS
                 <Image src={data.image} height={150} width={100} />
               </div> */}
-              <div className="relative w-full h-60">
+              <div className="relative w-full aspect-video">
                 <Image
                   src={data.image}
                   alt="course image"
                   fill
-                  className="object-cover rounded-lg"
+                  className="rounded-lg"
                 />
               </div>
             </figure>
@@ -54,8 +54,10 @@ const Courses = async () => {
                 <div className="avatar">
                   <div className="w-6 rounded-full">
                     <Image
-                      src="https://ui-avatars.com/api/?name=John+Doe"
+                      src={data.instructor_img}
                       alt="author"
+                      width={80}
+                      height={80}
                     />
                   </div>
                 </div>

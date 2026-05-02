@@ -3,13 +3,31 @@ import React from "react";
 import { Eye, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { authClient } from "@/lib/auth-client";
 
 const LoginPage = () => {
-  const handlerLogin = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const handlerLogin = async (data) => {
+    const { data: res, error } = await authClient.signIn.email({
+      email: data.email, // required
+      password: data.password, // required
+      rememberMe: true,
+      callbackURL: "/",
+    });
+
+    if (error) {
+      alert(error.message);
+    }
+    if (res) {
+      alert("Login Successful");
+    }
+    console.log(res, error);
   };
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -26,17 +44,20 @@ const LoginPage = () => {
           </p>
         </div>
 
-        <form className="space-y-5" onSubmit={handlerLogin}>
+        <form className="space-y-5" onSubmit={handleSubmit(handlerLogin)}>
           <div className="space-y-2">
             <label className="text-sm font-bold text-slate-800 ml-1">
               Email
             </label>
             <input
               type="email"
-              name="email"
               placeholder="Enter your email"
               className="w-full px-5 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50/50 transition-all text-slate-600 placeholder:text-slate-300"
+              {...register("email", { required: "Email field is required" })}
             />
+            {errors.email && (
+              <p className="text-red-500 text-[13px]">{errors.email.message}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -54,10 +75,17 @@ const LoginPage = () => {
 
             <input
               type="password"
-              name="password"
               placeholder="Enter your password"
               className="w-full px-5 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50/50 transition-all text-slate-600 placeholder:text-slate-300"
+              {...register("password", {
+                required: "Password field is required",
+              })}
             />
+            {errors.password && (
+              <p className="text-red-500 text-[13px]">
+                {errors.password.message}
+              </p>
+            )}
           </div>
 
           <button className="w-full bg-[#6366F1] hover:bg-[#4F46E5] text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 mt-4">

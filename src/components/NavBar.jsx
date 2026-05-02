@@ -1,9 +1,13 @@
+"use client";
+import { authClient } from "@/lib/auth-client";
 import { GraduationCap } from "lucide-react";
 
 import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
+  const { data: session } = authClient.useSession();
+  // console.log(session, "session");
   const links = (
     <>
       <li>

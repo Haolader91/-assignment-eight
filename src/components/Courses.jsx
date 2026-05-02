@@ -1,7 +1,6 @@
-import { Clock, Star } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import CoursesCard from "./CoursesCard";
+import Link from "next/link";
 
 const Courses = async () => {
   const res = await fetch("http://localhost:3000/data.json");
@@ -17,9 +16,12 @@ const Courses = async () => {
         <h2 className="text-2xl lg:text-3xl font-bold text-slate-800">
           Popular Courses
         </h2>
-        <button className="text-indigo-600 font-semibold flex items-center gap-1 hover:underline">
-          View All Courses <span>→</span>
-        </button>
+
+        <Link href="/coursesPage">
+          <button className="text-indigo-600 font-semibold flex items-center gap-1 hover:underline">
+            View All Courses <span>→</span>
+          </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link href="/coursesPage">Courses</Link>
       </li>
       <li>
-        <Link href="/login">My Profile</Link>
+        <Link href="/yyy">My Profile</Link>
       </li>
     </>
   );

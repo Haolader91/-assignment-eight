@@ -12,10 +12,6 @@ const CoursesCard = ({ data }) => {
           </span>
         </div>
 
-        {/* <div className="bg-slate-900 w-full h-full flex items-center justify-center text-white text-2xl font-bold">
-                NEXT.JS
-                <Image src={data.image} height={150} width={100} />
-              </div> */}
         <div className="relative w-full aspect-video">
           <Image
             src={data.image}
@@ -31,7 +27,7 @@ const CoursesCard = ({ data }) => {
         </h3>
         <div className="flex items-center gap-2 mt-2">
           <div className="avatar">
-            <div className="w-6 rounded-full">
+            <div className="rounded-full">
               <Image
                 src={data.instructor_img}
                 alt="author"
@@ -57,8 +53,8 @@ const CoursesCard = ({ data }) => {
         </div>
 
         <div className="card-actions mt-5">
-          <Link href={`/coursesPage/${data.id}`}>
-            <button className="btn btn-primary w-full bg-indigo-600 p-2 border-none hover:bg-indigo-700 text-white rounded-xl capitalize">
+          <Link href={`/coursesPage/${data.id}`} className="w-full">
+            <button className="btn btn-primary w-full rounded-xl">
               View Details
             </button>
           </Link>

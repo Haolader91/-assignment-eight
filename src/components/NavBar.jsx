@@ -1,12 +1,16 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { GraduationCap } from "lucide-react";
+import Image from "next/image";
+import AvatarImage from "../Asstes/web Design and Developer.png";
 
 import Link from "next/link";
-import React from "react";
+import React, { use } from "react";
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
+
+  const user = session?.user;
   // console.log(session, "session");
   const links = (
     <>
@@ -35,20 +39,39 @@ const Navbar = () => {
             <ul className="flex gap-10 text-gray-700 font-medium">{links}</ul>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <Link
-              href="/login"
-              className="text-gray-700 border border-gray-400 px-5 py-2 rounded-md  hover:text-[#6366F1] font-medium"
-            >
-              Login
-            </Link>
-            <Link
-              href="/register"
-              className="bg-[#6366F1] text-white px-5 py-2 rounded-md font-medium hover:bg-[#6366F1] transition"
-            >
-              Register
-            </Link>
-          </div>
+          {user ? (
+            <div className="flex gap-3">
+              <h2 className="pt-1.5 uppercase"> Hi, {user?.name}</h2>
+              <div>
+                <Image
+                  src={user?.image || AvatarImage}
+                  alt="User avatar"
+                  class="w-10 h-10 rounded-full object-cover border border-gray-200 cursor-pointer hover:ring-2 hover:ring-blue-400 transition-all"
+                />
+              </div>
+              <button
+                onClick={async () => await authClient.signOut()}
+                className="bg-[#6366F1] text-white px-5 py-2 rounded-md font-medium hover:bg-[#6366F1] transition"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center space-x-4">
+              <Link
+                href="/login"
+                className="text-gray-700 border border-gray-400 px-5 py-2 rounded-md  hover:text-[#6366F1] font-medium"
+              >
+                Login
+              </Link>
+              <Link
+                href="/register"
+                className="bg-[#6366F1] text-white px-5 py-2 rounded-md font-medium hover:bg-[#6366F1] transition"
+              >
+                Register
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </nav>

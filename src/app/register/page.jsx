@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
   const {
@@ -13,6 +14,8 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+
   const handlerRegister = async (data) => {
     const { email, name, password } = data;
     const { data: res, error } = await authClient.signUp.email({
@@ -20,7 +23,7 @@ const RegisterPage = () => {
       email: email, // required
       password: password, // required
       // image: "https://example.com/image.png",
-      // callbackURL: "https://example.com/callback",
+      // callbackURL: "/",
     });
     console.log(res, error);
 
@@ -28,6 +31,12 @@ const RegisterPage = () => {
       alert(error.message);
     }
     if (res) {
+      await authClient.signIn.email({
+        email,
+        password,
+      });
+      router.push("/");
+
       alert("Registration Successful");
     }
   };
@@ -106,7 +115,10 @@ const RegisterPage = () => {
             )}
           </div>
 
-          <button className="w-full bg-[#6366F1] hover:bg-[#4F46E5] text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 mt-4">
+          <button
+            type="submit"
+            className="w-full bg-[#6366F1] hover:bg-[#4F46E5] text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 mt-4"
+          >
             Register
           </button>
         </form>

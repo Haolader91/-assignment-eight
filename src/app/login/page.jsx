@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
-import { Eye, GraduationCap } from "lucide-react";
+import React, { useState } from "react";
+import { Eye, EyeIcon, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { FaEyeSlash } from "react-icons/fa";
 
 const LoginPage = () => {
   const {
@@ -29,6 +30,8 @@ const LoginPage = () => {
     }
     console.log(res, error);
   };
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
       <div className="bg-white w-full max-w-112.5 rounded-xl p-8 md:p-10 shadow-sm border border-slate-100">
@@ -60,7 +63,7 @@ const LoginPage = () => {
             )}
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 relative">
             <div className="flex justify-between items-center px-1">
               <label className="text-sm font-bold text-slate-800">
                 Password
@@ -74,13 +77,23 @@ const LoginPage = () => {
             </div>
 
             <input
-              type="password"
+              type={isShowPassword ? "text" : "password"}
               placeholder="Enter your password"
-              className="w-full px-5 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50/50 transition-all text-slate-600 placeholder:text-slate-300"
+              className="  w-full px-5 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50/50 transition-all text-slate-600 placeholder:text-slate-300"
               {...register("password", {
                 required: "Password field is required",
               })}
             />
+            <span
+              className="absolute right-5 top-11 cursor-pointer"
+              onClick={() => setIsShowPassword(!isShowPassword)}
+            >
+              {isShowPassword ? (
+                <EyeIcon size={20} />
+              ) : (
+                <FaEyeSlash size={20} />
+              )}
+            </span>
             {errors.password && (
               <p className="text-red-500 text-[13px]">
                 {errors.password.message}

@@ -4,7 +4,9 @@ import Image from "next/image";
 
 const courseDetails = async ({ params }) => {
   const { coursesId } = await params;
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://haolader.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   const dataFind = data.find((d) => d.id == coursesId);

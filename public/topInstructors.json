@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Abul Kalam",
+    "role": "Web Developer",
+    "rating": 4.9,
+    "reviews": "150+",
+    "image": "https://i.ibb.co.com/gZnJx6Qg/Screenshot-172.png"
+  },
+  {
+    "id": 2,
+    "name": "Tamim Islam",
+    "role": "UI/UX Designer",
+    "rating": 4.8,
+    "reviews": "120+",
+    "image": "https://i.ibb.co.com/0jpTQCBp/b6233982-7cb4-4e57-a60d-27689f2f800b.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mehedi Hasan",
+    "role": "Digital Marketer",
+    "rating": 4.7,
+    "reviews": "100+",
+    "image": "https://i.ibb.co.com/bj4r9TrZ/593872720-1987738352082768-7090824174815673284-n.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Salehin Prodhan",
+    "role": "Content Creator",
+    "rating": 4.8,
+    "reviews": "110+",
+    "image": "https://i.ibb.co.com/LzChy293/253156790-1158248348036141-3190730034083934306-n.jpg"
+  }
+]

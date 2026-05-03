@@ -121,7 +121,7 @@ const LoginPage = () => {
           type="button"
           className="w-full flex items-center cursor-pointer justify-center gap-3 bg-white border border-slate-200 text-slate-700 font-bold py-3.5 rounded-2xl hover:bg-slate-50 transition-all shadow-sm mt-2"
         >
-          <FaGoogle className="text-red-500" />{" "}
+          <FaGoogle className="text-red-500" />
           <span>Continue with Google</span>
         </button>
 

@@ -1,9 +1,12 @@
 import React from "react";
 import CoursesCard from "./CoursesCard";
 import Link from "next/link";
+import { MoveRight } from "lucide-react";
 
 const Courses = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://haolader.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   // https://assignment-eight-2t62.vercel.app/data.json
@@ -19,7 +22,7 @@ const Courses = async () => {
 
         <Link href="/coursesPage">
           <button className="text-indigo-600 font-semibold flex items-center gap-1 hover:underline">
-            View All Courses <span>→</span>
+            View All Courses <MoveRight />
           </button>
         </Link>
       </div>

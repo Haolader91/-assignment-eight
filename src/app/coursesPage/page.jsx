@@ -2,7 +2,9 @@ import CoursesCard from "@/components/CoursesCard";
 import React from "react";
 
 const CoursesPage = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://haolader.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
   //   console.log(data);
   return (

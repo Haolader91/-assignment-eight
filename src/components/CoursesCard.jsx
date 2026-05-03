@@ -17,6 +17,7 @@ const CoursesCard = ({ data }) => {
             src={data.image}
             alt="course image"
             fill
+            sizes="100px"
             className="rounded-lg"
           />
         </div>

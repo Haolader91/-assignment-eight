@@ -53,6 +53,7 @@ const HeroBanner = () => {
               className="w-full h-auto drop-shadow-2xl"
               width={1200}
               height={600}
+              priority
             />
 
             <div className="absolute -top-4 -left-4 bg-white p-3 rounded-2xl shadow-lg hidden md:block">

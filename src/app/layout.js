@@ -19,7 +19,10 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${OutfitFont.className}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body
+        className="min-h-full flex flex-col"
+        suppressHydrationWarning={true}
+      >
         <Navbar />
         {children}
         <Footer />

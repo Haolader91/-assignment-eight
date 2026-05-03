@@ -40,13 +40,15 @@ const Navbar = () => {
           </div>
 
           {user ? (
-            <div className="flex gap-3">
-              <h2 className="pt-1.5 uppercase"> Hi, {user?.name}</h2>
+            <div className="flex items-center gap-3">
+              <h2 className="uppercase"> Hi, {user?.name}</h2>
               <div>
                 <Image
                   src={user?.image || AvatarImage}
                   alt="User avatar"
-                  class="w-10 h-10 rounded-full object-cover border border-gray-200 cursor-pointer hover:ring-2 hover:ring-blue-400 transition-all"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full object-cover border border-gray-200 cursor-pointer hover:ring-2 hover:ring-blue-400 transition-all"
                 />
               </div>
               <button

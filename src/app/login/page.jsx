@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
-import { FaEyeSlash } from "react-icons/fa";
+import { FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
   const {
@@ -29,6 +29,12 @@ const LoginPage = () => {
       alert("Login Successful");
     }
     console.log(res, error);
+  };
+
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -109,6 +115,15 @@ const LoginPage = () => {
         <div className="divider divider-info text-xs font-medium text-slate-400 uppercase my-8">
           or continue with
         </div>
+
+        <button
+          onClick={handleGoogleSignIn}
+          type="button"
+          className="w-full flex items-center cursor-pointer justify-center gap-3 bg-white border border-slate-200 text-slate-700 font-bold py-3.5 rounded-2xl hover:bg-slate-50 transition-all shadow-sm mt-2"
+        >
+          <FaGoogle className="text-red-500" />{" "}
+          <span>Continue with Google</span>
+        </button>
 
         <p className="text-center text-sm text-slate-500 mt-10">
           Don t have an account?

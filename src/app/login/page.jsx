@@ -16,8 +16,8 @@ const LoginPage = () => {
 
   const handlerLogin = async (data) => {
     const { data: res, error } = await authClient.signIn.email({
-      email: data.email, // required
-      password: data.password, // required
+      email: data.email,
+      password: data.password,
       rememberMe: true,
       callbackURL: "/",
     });

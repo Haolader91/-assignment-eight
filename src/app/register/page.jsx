@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const {
@@ -29,7 +30,7 @@ const RegisterPage = () => {
     // console.log(res, error);
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message || "Registration failed!");
     }
     if (res) {
       await authClient.signIn.email({
@@ -38,7 +39,7 @@ const RegisterPage = () => {
       });
       router.push("/");
 
-      alert("Registration Successful");
+      toast.success("Registration Successful!");
     }
   };
 

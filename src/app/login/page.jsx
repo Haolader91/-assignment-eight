@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import { FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -23,12 +24,12 @@ const LoginPage = () => {
     });
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message || "Login failed!");
     }
     if (res) {
-      alert("Login Successful");
+      toast.success("Login Successful! Welcome back.");
     }
-    console.log(res, error);
+    // console.log(res, error);
   };
 
   const handleGoogleSignIn = async () => {

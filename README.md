@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🎓 SkillSphere – Online Learning Platform
 
-## Getting Started
+# Project Overview
 
-First, run the development server:
+# Live Site
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Live URL: https://your-live-link.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Next.js
+Tailwind CSS
+DaisyUI and HeroUI
+BetterAuth
+Lucide React Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Key Features
 
-## Learn More
+User Authentication (Login & Register)
+Google Login Support
+All Courses Page (10 courses)
+Search Courses by Title
+Protected Course Details Page
+User Profile Page
+Update User Information (Name & Image)
+Fully Responsive Design (Mobile, Tablet, Desktop)
+Toast Notifications
+Loading Spinner Data Fetching
+Custom Not Found Page
 
-To learn more about Next.js, take a look at the following resources:
+# Pages Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Home Page (Hero + Popular Courses + Extra Sections)
+Courses Page (All Courses List)
+Course Details Page (Protected)
+Login Page
+Register Page
+My Profile Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Course Data
 
-## Deploy on Vercel
+## Minimum 6 courses added using JSON
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Each course contains:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Title
+Instructor
+Duration
+Rating
+Level
+Description
+Image
+
+# Authentication System
+
+Email & Password Login/Register
+Google Social Login
+Secure session handling with BetterAuth
+
+# Environment Variables
+
+Sensitive data (API keys, auth secrets) are stored in .env file.
+
+# NPM Packages Used
+
+better-auth
+lucide-react
+motion for animation
+react-toast
+
+# Project Structure
+
+App Router (Next.js)
+Components based structure
+Reusable UI components
+
+# Challenges Implemented
+
+Search Functionality
+Protected Routes
+Profile Update Feature
+Animation width Motion

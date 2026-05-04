@@ -4,7 +4,8 @@
 
 # Live Site
 
-Live URL: https://your-live-link.vercel.app
+Live URL: https://haolader.vercel.app
+Github Repo Link : https://github.com/Haolader91/-assignment-eight
 
 # Technologies Used
 

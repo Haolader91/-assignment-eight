@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 ">
-        <div className="grid grid-cols-4  gap-12 mb-12">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 items-center md:items-start text-center md:text-left">
+          <div className=" space-y-4">
+            <div className="flex items-center gap-2 justify-center md:justify-start">
               <div className="bg-blue-600 p-1.5 rounded-lg text-white">
                 <GraduationCap size={24} />
               </div>
@@ -17,7 +17,7 @@ const Footer = () => {
                 SkillSphere
               </span>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
+            <p className="text-slate-500 mx-auto text-sm leading-relaxed max-w-xs">
               Empowering learners around the world.
             </p>
           </div>
@@ -88,7 +88,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-bold mb-6">Follow Us</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <a href="#" className="text-blue-600 hover:text-blue-800">
                 <FaFacebook size={24} />
               </a>

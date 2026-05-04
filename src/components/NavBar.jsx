@@ -6,22 +6,42 @@ import AvatarImage from "../Asstes/web Design and Developer.png";
 
 import Link from "next/link";
 import React, { use } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
-
   const user = session?.user;
   // console.log(session, "session");
+
+  const pathname = usePathname();
+
   const links = (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <Link
+          href="/"
+          className={pathname === "/" ? "text-[#6366F1] font-bold" : ""}
+        >
+          Home
+        </Link>
       </li>
       <li>
-        <Link href="/coursesPage">Courses</Link>
+        <Link
+          href="/coursesPage"
+          className={
+            pathname === "/coursesPage" ? "text-[#6366F1] font-bold" : ""
+          }
+        >
+          Courses
+        </Link>
       </li>
       <li>
-        <Link href="/profile">My Profile</Link>
+        <Link
+          href="/profile"
+          className={pathname === "/profile" ? "text-[#6366F1] font-bold" : ""}
+        >
+          My Profile
+        </Link>
       </li>
     </>
   );
@@ -30,17 +50,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold flex gap-2">
+            <Link
+              href="/"
+              className="text-2xl md:text-2xl font-bold flex gap-2"
+            >
               <GraduationCap size={30} />
               <span className="text-[#6366F1]">Skill</span>Sphere
             </Link>
           </div>
-          <div>
+          <div className="hidden md:block">
             <ul className="flex gap-10 text-gray-700 font-medium">{links}</ul>
           </div>
 
           {user ? (
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-4">
               <h2 className="uppercase"> Hi, {user?.name}</h2>
               <div>
                 <Image
